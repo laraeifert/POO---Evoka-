@@ -1,17 +1,27 @@
 class Pessoa:
+
     def __init__(self, nome: str, email: str, contato_emerg: int = 192):
-        #Atributos públicos (+)
+        #Atributos públicos (+), recebidos na criação do objeto
         self.nome = nome
         self.email = email
-        self.contato_emerg = contato_emerg
-    def set_contato_emerg(self, contato_emerg: int):
-        #Atributo privado (-)
-        self.__contato_emerg = contato_emerg
-    #Atributos publicos (+)    
-    self.idade = idade 
-    self.endereco = endereco
-    self.cpf = cpf 
 
+        #Atributos publicos (+), não recebidos na criação do objeto
+        self.idade = None
+        self.endereco = None
+        self.cpf = str()
+        self.treinos = list()
+        self.estabelecimentos = list() 
+
+        #Atributo privado (-), recebido na criação do objeto
+        self.__contato_emerg = contato_emerg
+
+    def set_contato_emerg(self, contato_emerg: int):
+        #Atributo privado (-), alterado após a criação do objeto
+        self.__contato_emerg = contato_emerg
+    
+    def ver_contato_emerg(self):
+        #Atributo privado (-), acessado após a criação do objeto
+        return self.__contato_emerg
 
 class Estabelecimento:
     def __init__(self, nome: str, endereco: str,):
