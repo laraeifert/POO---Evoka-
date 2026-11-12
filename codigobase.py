@@ -8,7 +8,7 @@ class Pessoa:
         #Atributos publicos (+), não recebidos na criação do objeto
         self.idade = None
         self.endereco = None
-        self.cpf = str()
+        self.cpf = None
         self.treinos = list()
         self.estabelecimentos = list() 
 
@@ -28,9 +28,9 @@ class Estabelecimento:
         #Atributos públicos (+)
         self.nome = nome
         self.endereco = endereco
-    def set_cnpj(self, cnpj: int):
+    def set_cnpj(self, cnpj: str):
         #Atributos Protegidos (#)
-        self._cnpj = cnpj
+        self._cnpj = None
     def set_produtos(self, produtos: str):
         #Atributos privados (-)
         self.__produtos = produtos
