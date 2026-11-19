@@ -110,7 +110,7 @@ class Treinos:
         return relatorio
 
     def classifica_ritmo(self):
-        # Será sobrescrito pelas classes filhas (POLIMORFISMO)
+        # (POLIMORFISMO)
         return "Sem classificação"
 
 
@@ -202,6 +202,4 @@ def main():
     print("Estabelecimentos da Ana:", [e.nome for e in ana.estabelecimentos])
     print("Mercado:", mercado.nome, "| Produtos:", mercado.ver_produtos())
 
-
-if __name__ == "__main__":
-    main()
+main()
